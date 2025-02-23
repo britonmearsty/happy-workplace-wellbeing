@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,9 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <a href="/" className="text-xl font-bold text-brand-600">
+            <Link to="/" className="text-xl font-bold text-brand-600">
               WellnessWork
-            </a>
+            </Link>
           </div>
 
           {/* Desktop menu */}
@@ -30,10 +31,14 @@ export const Navbar = () => {
             <a href="#faq" className="text-gray-600 hover:text-brand-600 transition-colors">
               FAQ
             </a>
-            <Button variant="outline" className="mr-2">
-              Log in
-            </Button>
-            <Button>Get Started</Button>
+            <Link to="/auth">
+              <Button variant="outline" className="mr-2">
+                Log in
+              </Button>
+            </Link>
+            <Link to="/auth">
+              <Button>Get Started</Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -77,10 +82,14 @@ export const Navbar = () => {
               FAQ
             </a>
             <div className="px-3 py-2 space-y-2">
-              <Button variant="outline" className="w-full">
-                Log in
-              </Button>
-              <Button className="w-full">Get Started</Button>
+              <Link to="/auth">
+                <Button variant="outline" className="w-full">
+                  Log in
+                </Button>
+              </Link>
+              <Link to="/auth">
+                <Button className="w-full">Get Started</Button>
+              </Link>
             </div>
           </div>
         </div>
