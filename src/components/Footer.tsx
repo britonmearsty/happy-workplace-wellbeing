@@ -126,24 +126,23 @@ export const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text
-
-### What's next?
-- **Refine & Customize**: Tweak the design, animations, and layouts via prompts or visual edits.
-- **Master Prompting**: Use clear, detailed, and iterative prompts for better outcomes.
-- **Expand with Backend**: Connect Supabase to add user accounts, store user data, and integrate AI features for personalized recommendations and wellbeing assessments.
-- **GitHub Sync**: Transfer your project's code to GitHub for two-way sync of edits.
-- **Debug with Ease**: Activate our experimental “chat mode” to troubleshoot issues quickly.
-- **Add project knowledge**: Set key context or custom instructions you want to include in every edit in this project.
-
-<lov-actions>
-<lov-knowledge>
-</lov-actions>
-
-<lov-actions>
-<lov-message-prompt message="Tell me more about Supabase">Explore Supabase</lov-message-prompt>
-</lov-actions>
-
-<lov-actions>
-<lov-link url="https://docs.lovable.dev/">Visit docs</lov-link>
-</lov-actions>
+            <p className="text-sm text-gray-400">
+              © {new Date().getFullYear()} WellnessWork. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="#" className="text-sm text-gray-400 hover:text-white">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-sm text-gray-400 hover:text-white">
+                Terms of Service
+              </a>
+              <a href="#" className="text-sm text-gray-400 hover:text-white">
+                Cookie Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
